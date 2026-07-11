@@ -1,0 +1,28 @@
+.points-picker {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.points-chip {
+  background: var(--panel-raised);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.points-chip:hover {
+  border-color: var(--accent-dim);
+  color: var(--text);
+}
+
+.points-chip.selected {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}

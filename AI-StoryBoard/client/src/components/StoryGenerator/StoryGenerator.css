@@ -1,0 +1,89 @@
+.generator {
+  max-width: 640px;
+}
+
+.generator-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.generator-input-row input {
+  flex: 1;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.generator-input-row input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.primary-btn {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #1a1305;
+  font-weight: 600;
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.primary-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.primary-btn:not(:disabled):hover {
+  filter: brightness(1.08);
+}
+
+/* The "console" is the one deliberately characterful element in this
+   app -- a terminal-style readout for the streaming text, with a
+   blinking block cursor while tokens are still arriving. */
+.console {
+  margin-top: 18px;
+  background: #0e1013;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  min-height: 120px;
+}
+
+.console pre {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #cbd0d8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: var(--accent);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 900ms steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.generator-error {
+  color: #de5b5b;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.generator > .primary-btn {
+  margin-top: 16px;
+}

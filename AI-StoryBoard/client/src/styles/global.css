@@ -1,0 +1,56 @@
+:root {
+  /* Palette: a graphite "console" look instead of the usual light/dark
+     Jira clone. Amber is the one accent color, used only for active
+     states and the AI streaming cursor -- everything else stays quiet. */
+  --bg: #14171c;
+  --panel: #1b1f26;
+  --panel-raised: #21262f;
+  --border: #2a2f38;
+  --text: #e8e6e1;
+  --text-muted: #8b909c;
+  --accent: #e8a33d;
+  --accent-dim: #7a5a28;
+
+  --status-todo: #5b7fde;
+  --status-progress: #e8a33d;
+  --status-review: #b98bde;
+  --status-done: #4fae7c;
+
+  --font-ui: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, textarea {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--accent-dim);
+}
+
+/* Respect reduced-motion preference instead of forcing animations on everyone */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
